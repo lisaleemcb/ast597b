@@ -1,0 +1,61 @@
+# Schema for the Data Sweep Star table from SDSS D12 data set
+filters: {FILL IN}
+schema:
+  common:
+    primary_key: SDSS_id
+    spatial_keys: [ra, dec]
+    columns:
+    - [run, i8]
+    - [rerun,]
+    - [camcol, i8]
+    - [field, i8]
+    - [id, i8]
+    - [objc_type, i8]
+    - [objc_flags, i4]
+    - [ojbc_flags2, i4]
+    - [zhedflag, i4]
+    - [objc_rowc, f4]
+    - [rowv, f4]
+    - [rowverr, f4]
+    - [colv, f4]
+    - [colverr, f4]
+    - [colc, f4]
+    - [flags, f4]
+    - [flags2 ,f4]
+    - [ra, f8]
+    - [dec,f8]
+  photometry:
+    columns:
+    - [skyflux, f4]
+    - [psfflux, f4]
+    - [psfflux_ivar, f4]
+    - [modelflux, f4]
+    - [modelflux_ivar, f4]
+    - [extinction, f4]
+    - [aperflux6, f4]
+  image_resolve_calibration:
+    - [psp_status, i8]
+    - [psf_fwhm, f4]
+    - [resolve_status, i4]
+    - [thing_id, i8]
+    - [ifield, i8]
+    - [balkan_id, i8]
+    - [ndetect, i4]
+    - [calib_status, i4]
+    - [nmgypercount, f4]
+  2MASS_match:
+    - [tmass_j, f4]
+    - [tmass_j_ivar, f4]
+    - [tmass_h, f4]
+    - [tmass_h_ivar, f4]
+    - [tmass_k, f4]
+    - [tmass_k_ivar, f4]
+    - [tmass_ph_qual, a3]
+    - [tmass_rd_flg, i4]
+    - [tmass_bl_flg, i4]
+    - [tmass_cc_flg, a3]
+    - [tmass_gal_contam, i3] #8 bit int? not sure about this one
+    - [tmass_mp_flg, i3] #ditto above
+    - [tmass_jdate, f8]
+    - [tmass_matchdist, f4]
+    - [tmass_nmatch, i4]
